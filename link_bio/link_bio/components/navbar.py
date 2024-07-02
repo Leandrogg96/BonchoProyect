@@ -2,8 +2,12 @@ import reflex as rx
 
 def navbar_link(text: str, url: str) -> rx.Component:
     return rx.link(
-        rx.text(text, size="4", weight="medium"), href=url
-    )
+        rx.text(text, 
+                size="4", 
+                weight="bold",
+                color_scheme="brown"), 
+        href=url
+        )
 
 
 def navbar() -> rx.Component:
@@ -12,8 +16,8 @@ def navbar() -> rx.Component:
             rx.hstack(
                 rx.hstack(
                     rx.image(
-                        src="/logo.jpg",
-                        width="2.25em",
+                        src="/LogoB.jpg",
+                        width="3em",
                         height="auto",
                         border_radius="25%",
                     ),
@@ -38,7 +42,7 @@ def navbar() -> rx.Component:
             rx.hstack(
                 rx.hstack(
                     rx.image(
-                        src="/logo.jpg",
+                        src="/favicon.ico",
                         width="2em",
                         height="auto",
                         border_radius="25%",
@@ -64,7 +68,7 @@ def navbar() -> rx.Component:
                 align_items="center",
             ),
         ),
-        bg=rx.color("accent", 3),
+        bg=rx.color("brown", 3),
         padding="1em",
         #position="fixed",
          top="0px",

@@ -1,7 +1,8 @@
 import reflex as rx
 from link_bio.components.navbar import navbar
 from link_bio.views.header.header import header
-
+from link_bio.components.footer import footer
+import link_bio.components.styles.styles as styles
 
 from rxconfig import config
 
@@ -14,35 +15,17 @@ class State(rx.State):
 
 def index() -> rx.Component:
     # Welcome Page (Index)
-    return rx.container(
-        rx.color_mode.button(position="top-right"),
+    return rx.box(
         navbar(),
-        header(),
-        rx.vstack(
-            rx.heading("Welcome to Boncho!", 
-                       align="center", 
-                       direction="column", 
-                       spacing="3", 
-                       width="100%", 
-                       size="9", 
-                       weight="bold", 
-                       color_scheme="crimson",
-                       high_contrast=True),
-            rx.text(
-                "Get started by editing ",
-                rx.code(f"{config.app_name}/{config.app_name}.py"),
-                size="5",
+        rx.center(
+            rx.vstack(
+                header(),
+                max_width=styles.MAX_WIDTH,
+                width="100%",
+                margin_y=styles.Spacer.BIG
             ),
-            rx.link(
-                rx.button("Check out our docs!"),
-                href="https://reflex.dev/docs/getting-started/introduction/",
-                is_external=True,
-            ),
-            spacing="5",
-            justify="center",
-            min_height="85vh",
         ),
-        rx.logo(),
+        footer(),
     )
 
 
