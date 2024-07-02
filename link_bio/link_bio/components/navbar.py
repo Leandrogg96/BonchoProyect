@@ -1,12 +1,14 @@
 import reflex as rx
+from link_bio.styles.styles import Spacer
 
-def navbar_link(text: str, url: str) -> rx.Component:
+def navbar_link(text: str, url: str, value: bool) -> rx.Component:
     return rx.link(
         rx.text(text, 
                 size="4", 
                 weight="bold",
-                color_scheme="brown"), 
-        href=url
+                color_scheme="brown"),
+                is_external=value, 
+                href=url
         )
 
 
@@ -17,20 +19,22 @@ def navbar() -> rx.Component:
                 rx.hstack(
                     rx.image(
                         src="/LogoB.jpg",
-                        width="3em",
+                        width=Spacer.BIG,
                         height="auto",
                         border_radius="25%",
                     ),
                     rx.heading(
-                        "Boncho", size="7", weight="bold"
+                        "Boncho", size="6", weight="bold"
                     ),
                     align_items="center",
                 ),
                 rx.hstack(
-                    navbar_link("Home", "/#"),
-                    navbar_link("Quienes somos?", "/#"),
-                    navbar_link("Productos", "/#"),
-                    navbar_link("Contacto", "/#"),
+                    navbar_link("Home", "/#", False),
+                    navbar_link("Quienes somos?", "/#", False),
+                    navbar_link("Productos", "/#", False),
+                    navbar_link("Instagram", "https://www.instagram.com/boncho_comidas/", True),
+                    navbar_link("Contacto", "/#", False),
+                    navbar_link("Hace tu pedido!", "https://menu.fu.do/boncho", True),
                     justify="end",
                     spacing="5",
                 ),
@@ -43,12 +47,12 @@ def navbar() -> rx.Component:
                 rx.hstack(
                     rx.image(
                         src="/favicon.ico",
-                        width="2em",
+                        width=Spacer.BIG,
                         height="auto",
                         border_radius="25%",
                     ),
                     rx.heading(
-                        "Reflex", size="6", weight="bold"
+                        "Boncho", size="6", weight="bold"
                     ),
                     align_items="center",
                 ),
@@ -69,9 +73,10 @@ def navbar() -> rx.Component:
             ),
         ),
         bg=rx.color("brown", 3),
-        padding="1em",
+        padding_y=Spacer.SMALL,
+        padding_x=Spacer.SMALL,
         #position="fixed",
-         top="0px",
+        top="0px",
         # z_index="5",
         width="100%",
     )
