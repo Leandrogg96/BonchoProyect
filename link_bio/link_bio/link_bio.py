@@ -1,5 +1,7 @@
 import reflex as rx
 from link_bio.components.navbar import navbar
+from link_bio.views.header.header import header
+
 
 from rxconfig import config
 
@@ -15,6 +17,7 @@ def index() -> rx.Component:
     return rx.container(
         rx.color_mode.button(position="top-right"),
         navbar(),
+        header(),
         rx.vstack(
             rx.heading("Welcome to Boncho!", 
                        align="center", 
