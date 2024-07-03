@@ -19,13 +19,7 @@ def index() -> rx.Component:
         navbar(),
         header(),
         footer(),
-        """rx.center(
-            rx.vstack(
-                max_width=styles.MAX_WIDTH,
-                width="100%",
-                margin_y=styles.Spacer.BIG
-            ),
-        ),"""
+        
     )
 
 
