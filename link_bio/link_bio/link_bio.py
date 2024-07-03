@@ -17,15 +17,15 @@ def index() -> rx.Component:
     # Welcome Page (Index)
     return rx.box(
         navbar(),
-        rx.center(
+        header(),
+        footer(),
+        """rx.center(
             rx.vstack(
-                header(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
                 margin_y=styles.Spacer.BIG
             ),
-        ),
-        footer(),
+        ),"""
     )
 
 

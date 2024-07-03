@@ -10,5 +10,6 @@ class Spacer(Enum):
     BIG = "2em"
 
 title_style = dict(
-   padding_top=Spacer.DEFAULT.value
+   padding_top=Spacer.DEFAULT.value,
+   margin_y= Spacer.DEFAULT
 )

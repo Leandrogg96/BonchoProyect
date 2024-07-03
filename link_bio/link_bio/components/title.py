@@ -5,7 +5,7 @@ def title(text: str) -> rx.Component:
     return rx.center(
                 rx.heading(  
                     text,
-                size="8",
+                size="9",
                 width="100%",
                 style=styles.title_style
                 )
