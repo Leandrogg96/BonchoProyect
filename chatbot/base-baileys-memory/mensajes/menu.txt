@@ -1,0 +1,7 @@
+Elegi una de las siguientes opciones:
+
+opcion 1 : opc1
+opcion 2 : opc2
+opcion 3 : opc3
+opcion 4 : opc4
+opcion 5 : opc5

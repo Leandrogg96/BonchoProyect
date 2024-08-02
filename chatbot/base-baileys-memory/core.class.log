@@ -1,0 +1,43 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '5493854069007@s.whatsapp.net',
+    fromMe: false,
+    id: '3EB067D612BFBD0DB92270',
+    participant: undefined
+  },
+  messageTimestamp: 1722611057,
+  pushName: 'Boncho',
+  broadcast: false,
+  message: Message {
+    extendedTextMessage: ExtendedTextMessage {
+      text: 'a',
+      contextInfo: [ContextInfo],
+      inviteLinkGroupTypeV2: 0
+    },
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  verifiedBizName: 'Boncho',
+  body: 'a',
+  from: '5493854069007'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_6d8abfe8-71ad-4d58-a353-ae04383d839e',
+  keyword: 'key_7b5226fa-ba66-455f-a7c6-aed6dcf00328',
+  answer: '🙌 Hola soy Boncho. ¿En que te puedo ayudar? JEJE',
+  options: {
+    media: 'C:/Users/galla/OneDrive/Escritorio/menu 2-8.jpeg',
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 100,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: true
+  },
+  refSerialize: '67ccfb59287e45e32f3368cd3822dea1'
+}
